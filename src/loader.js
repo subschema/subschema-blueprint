@@ -1,11 +1,21 @@
 import {loaderFactory, DefaultLoader, resolvers} from './subschema';
 import React, {Component, PropTypes} from 'react';
 import components from '@blueprintjs/core/dist/components/index';
+import '@blueprintjs/datetime/dist/blueprint-datetime.css';
+import {DateInput} from "@blueprintjs/datetime";
 
+DateInput.injectedPropTypes = {"onChange": "valueEvent"};
 
 const loader = loaderFactory([DefaultLoader]);
 
-loader.addType(components);
+const {Dialog, Collapse, ...types} = components;
+
+Dialog.injectedPropTypes = {onClose: 'toggleEvent', isOpen: 'toggle'};
+loader.addTemplate({Dialog, Collapse});
+
+loader.addType(types);
+
+loader.addType({DateInput});
 
 loader.addStyle({
     EditorTemplate: {

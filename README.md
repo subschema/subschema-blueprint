@@ -1,3 +1,17 @@
+Subschema Blueprint
+===
+This project is to show [blueprintjs](http://blueprintjs.com/docs/#components.datetime.dateinput)
+integration with Subschema.  How you can use wrap and otherwise modify subschema
+to work with a library that is totally 3rd party.  I am not totally sold on blueprintjs, but it seems to be one of the more
+thought out 
+
+*** EXPERIMENTAL ***
+
+
+Boilerplate
+===
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
